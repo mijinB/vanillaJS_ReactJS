@@ -3,7 +3,8 @@ HTML을 먼저 만들고 그걸 JavaScript로 가져와서 HTML을 수정<br>
 
 <b>ReactJS</b><br>
 JavaScript를 이용해 element를 만들고 React JS가 그걸 HTML로 번역<br>
-(모든 것이 JavaScript로 시작. 그 다음에 HTML이 된다.)<br><br><br>
+(모든 것이 JavaScript로 시작. 그 다음에 HTML이 된다.)<br>
+***여러가지 요소들을 리렌더링하려고 해도 전부 다 새로 생성되지 않고 바뀐 부분만 생성된다.<br>
 
 
 <i>createElement</i><br>
