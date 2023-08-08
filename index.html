@@ -5,15 +5,21 @@
   </body>
   <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
-  <script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
     const root = document.getElementById("root");
-    const span = React.createElement(
+
+    //createElement
+    /*
+    const title = React.createElement(
       "span",
       {
         onMouseEnter: () => console.log("mouse enter"),
       },
-      "Hello I'm a span"
+      "Hello I'm a title"
     );
+    */
+   /*
     const btn = React.createElement(
       "button",
       {
@@ -21,7 +27,27 @@
       },
       "Click me"
     );
-    const container = React.createElement("div", null, [span, btn]);
-    ReactDOM.render(container, root);
+    */
+   /*
+    const container = React.createElement("div", null, [title, btn]);
+    */
+
+    //JSX & babel
+    const Title = () => (
+      <span onMouseEnter={() => console.log("mouse enter")}>
+        Hello I'm a span
+      </span>
+    );
+   const Button = () => (
+      <button onClick={() => console.log("im clicked")}>
+        Click me
+      </button>
+    );
+   const Container = (
+    <div>
+      <Title /><Button />
+    </div>
+   );
+    ReactDOM.render(Container, root);
   </script>
 </html>
